@@ -93,18 +93,18 @@ banner = f"""
 {Fore.BLACK}═════════════════════════════════════════════════════
 {Fore.BLACK}
 {Fore.BLACK}
-{Fore.GREEN} ████{Fore.YELLOW}═╗{Fore.GREEN}█████{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗{Fore.GREEN} ███{Fore.YELLOW}═╗{Fore.GREEN} ██{Fore.YELLOW}═╗{Fore.GREEN}  █{Fore.YELLOW}═╗{Fore.GREEN}█████{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗
-{Fore.GREEN} █{Fore.YELLOW} ╔══╝{Fore.GREEN}█{Fore.YELLOW} ╔═{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ╔═{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█ █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║
-{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}   █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█ █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║
-{Fore.GREEN} ████{Fore.YELLOW}═╗{Fore.GREEN}█████{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}██{Fore.YELLOW}╔╝{Fore.GREEN}  █████{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW}║{Fore.GREEN} █{Fore.YELLOW} ║
-{Fore.GREEN}    █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ╚╗{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█ █{Fore.YELLOW} ╚╗{Fore.GREEN}█{Fore.YELLOW} ╔═{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW}║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW}║{Fore.GREEN} █{Fore.YELLOW} ║
-{Fore.GREEN} ████{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} ██{Fore.YELLOW}║{Fore.GREEN}  █████{Fore.YELLOW}║{Fore.GREEN} █{Fore.YELLOW} ║  
-{Fore.YELLOW}  ╚═══╝╚═╝ ╚═ ╚═ ╚═ ╚═ ╚═  ╚═ ╚═  ╚══  ╚═════ ╚══
+{Fore.GREEN}    ████{Fore.YELLOW}═╗{Fore.GREEN}█████{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗{Fore.GREEN} ███{Fore.YELLOW}═╗{Fore.GREEN} ██{Fore.YELLOW}═╗{Fore.GREEN}  █{Fore.YELLOW}═╗{Fore.GREEN}█████{Fore.YELLOW}═╗{Fore.GREEN}█{Fore.YELLOW}═╗
+{Fore.GREEN}    █{Fore.YELLOW} ╔══╝{Fore.GREEN}█{Fore.YELLOW} ╔═{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ╔═{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█ █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║
+{Fore.GREEN}    █{Fore.YELLOW} ║{Fore.GREEN}   █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█ █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║
+{Fore.GREEN}    ████{Fore.YELLOW}═╗{Fore.GREEN}█████{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}██{Fore.YELLOW}╔╝{Fore.GREEN}  █████{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW}║{Fore.GREEN} █{Fore.YELLOW} ║
+{Fore.GREEN}       █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ╚╗{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█ █{Fore.YELLOW} ╚╗{Fore.GREEN}█{Fore.YELLOW} ╔═{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW}║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW}  ║{Fore.GREEN}█{Fore.YELLOW}║{Fore.GREEN} █{Fore.YELLOW} ║
+{Fore.GREEN}    ████{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} █{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN} ██{Fore.YELLOW}║{Fore.GREEN}  █████{Fore.YELLOW}║{Fore.GREEN} █{Fore.YELLOW} ║  
+{Fore.YELLOW}    ╚═══╝╚═╝ ╚═ ╚═ ╚═ ╚═ ╚═  ╚═ ╚═  ╚══  ╚═════ ╚══
 {Fore.BLACK}
-{Fore.WHITE}     B L A C K  A R M Y  C O M M U N I T Y  
-{Fore.GREEN}                INTERNAL SCRIPT                
-{Fore.BLUE}                 ATTACK ZEON                  
-{Fore.WHITE}                  —oO0Oo—                       
+{Fore.WHITE}         B L A C K  A R M Y  C O M M U N I T Y  
+{Fore.GREEN}                    INTERNAL SCRIPT                
+{Fore.BLUE}                     ATTACK ZEON                  
+{Fore.WHITE}                      —oO0Oo—                       
 {Fore.BLACK}                                                       
 {Fore.BLACK}═══════════════════════════════════════════════════
 :::—⟩ Waiting for loading ...!! <==={Fore.RESET}"""
