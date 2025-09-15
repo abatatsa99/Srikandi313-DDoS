@@ -120,7 +120,7 @@ create_thread = int(input(F"{Fore.LIGHTBLUE_EX}::CREATE THREAD ==⟩⟩{Fore.LIG
 booter_sent = int(input(F"{Fore.LIGHTBLUE_EX}::BOOTER SENT ==⟩⟩{Fore.LIGHTYELLOW_EX}"))
 print(f"{Fore.CYAN} EXAMPLE HTTP METHODS> CONNECT GET POST HEAD")
 print(f"{Fore.CYAN}EXAMPLE CUSTOM HTTP METHODS> CLOUDFLARE AGE PYFLOODER GATEWAY")
-methods_loader = input(F"{Fore.LIGHTBLUE_EX}::HTTP_METHODS{Fore.LIGHTYELLOW_EX}"))
+methods_loader = input(F"{Fore.LIGHTBLUE_EX}::HTTP_METHODS{Fore.LIGHTYELLOW_EX}")
 print(f"{Fore.LIGHTBLUE_EX}TRYING TO GET IP:PORT {Fore.LIGHTMAGENTA_EX}. . .{Fore.RESET}")
 try:
     host = str(target_loader).replace("https://", "").replace("http://", "").replace("www.", "").replace("/", "")
