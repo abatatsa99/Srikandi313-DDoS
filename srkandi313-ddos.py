@@ -18,7 +18,15 @@ if os.name == 'nt':
     os.system("cls")
 else:
     os.system("clear")
-    print(" ")
+
+os.system("https://github.com/Kodekeras24")
+print("\033[37mWelcome to Zona Blackphanter\033[0m")
+time.sleep(5)
+print("Loading.......")
+
+attemps = 0
+os.system("clear")
+print("""
 \033[31m║\033[36m
 \033[31m║\033[36m  ╔═   ═╗
 \033[31m║\033[36m██
@@ -31,7 +39,7 @@ else:
 \033[31m║\033[36m  ╚════╝
 \033[31m║\033[36m
 \033[31m║\033[36m  
-
+""")
 
 
 
