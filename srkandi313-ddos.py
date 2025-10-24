@@ -1,3 +1,25 @@
+#!usr/bin/python3.11
+import os
+import requests
+import threading
+import datetime
+import sys
+import random
+import string
+import colorama
+
+# Colors
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    
+if os.name == 'nt':
+    os.system("cls")
+else:
+    os.system("clear")
+    print(" ")
+
 
 url = input("\033[96mURL:  \033[0m").strip()
 u = int(0)
