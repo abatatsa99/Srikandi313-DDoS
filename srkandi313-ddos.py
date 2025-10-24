@@ -19,8 +19,8 @@ if os.name == 'nt':
 else:
     os.system("clear")
 
-os.system("https://github.com/Kodekeras24")
-print("\033[37mWelcome to Zona Blackphanter\033[0m")
+os.system("https://github.com/abatatsa99/")
+print("\033[37mMEDAN JUANG BLACK ARMY\033[0m")
 time.sleep(5)
 print("Loading.......")
 
@@ -28,15 +28,16 @@ attemps = 0
 os.system("clear")
 print("""
 \033[31m║\033[36m
-\033[31m║\033[36m  ╔═   ═╗
-\033[31m║\033[36m██
-\033[31m║\033[36m  
-\033[31m║\033[36m
-\033[31m║\033[36m 
-\033[31m║\033[36m
-\033[31m║\033[36m  
-\033[31m║\033[36m
-\033[31m║\033[36m  ╚════╝
+\033[31m║\033[36m  ╔══════╗
+\033[31m║\033[36m█████╗
+\033[31m║\033[36m█╔═══╝
+\033[31m║\033[36m█║
+\033[31m║\033[36m█║
+\033[31m║\033[36m█████
+\033[31m║\033[36m╚══╗█
+\033[31m║\033[36m     ║█
+\033[31m║\033[36m█████    
+\033[31m║\033[36m╚════╝  
 \033[31m║\033[36m
 \033[31m║\033[36m  
 """)
@@ -45,8 +46,8 @@ while attemps < 100:
     username = input("\033[32mEnter your username: \033[0m")
     password = input("\033[31mEnter your password: \033[0m")
 
-    if username == 'bp4' and password == 'bp4':
-        print("\033[32m⟩⟩ Hai...! Welcome to zona attack BLACKPHANTER \033[0m")
+    if username == 'sr313' and password == 'srsr313':
+        print("\033[32m⟩⟩SRIKANDI BLACK ARMY\033[0m")
         break
     else:
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
