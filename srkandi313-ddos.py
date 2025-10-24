@@ -57,12 +57,13 @@ url = input("\033[96mURL:  \033[0m").strip()
 u = int(0)
 headers = []
 referer = [
-    "https://github.com/",
-    "https://google.it/",
-    "https://facebook.com/",
-    "https://alibaba.com/",
-    "https://google.com/",
+    "https://github.com",
+    "https://google.it",
+    "https://facebook.com",
+    "https://alibaba.com",
+    "https://google.com",
     "https://youtube.com",
+    "https://instagram.com",
     ]
 
 def useragent():
