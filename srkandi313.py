@@ -44,12 +44,12 @@ print("""
 """)
 while attemps < 100:
     print("\033[104m┌[Black-Army•••")
-    username = input("└> Enter your username: \033[41m")
+    username = input("└> Enter your username: \033[32m")
     print("\033[104m┌[Black-Army•••")
-    password = input("└> Enter your password: \033[41m")
+    password = input("└> Enter your password: \033[32m")
     print("\033[104m\033[0m")
     if username == 'srk313' and password == 'srk313':
-        print("\033[32m•••> SRIKANDI BLACK ARMY\033[0m")
+        print("\033[7m•••>  SRIKANDI BLACK ARMY\033[0m")
         break
     else:
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
