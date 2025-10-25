@@ -104,7 +104,7 @@ class httpth1(threading.Thread):
                 u += 1
                 print(f"\033[35m[] \033[96mSRIKANDI-313  \033[31mSent to  \033[95m••>   \033[97m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
-                print(f"\033[97m[] \033[102mSRIKANDI-313  \033[31mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
+                print(f"\033[97m[] \033[102mSRIKANDI-313  \033[7mConnection-error...!! "]\033[0m")
 
                 pass
             except requests.exceptions.InvalidSchema:
