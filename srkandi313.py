@@ -50,7 +50,9 @@ print("""
 """)
 
 while attemps < 100:
+    print("\033[32m
     username = input("\033[32mEnter your username: \033[0m")
+    print("\033[32m
     password = input("\033[32mEnter your password: \033[0m")
 
     if username == 'srk313' and password == 'srk313':
@@ -105,7 +107,7 @@ class httpth1(threading.Thread):
                 print(f"\033[35m[] \033[94mSRIKANDI-313  \033[33mSent to  \033[97m••>  \033[41m[" +str(url)+ "]\033[0m")
                 print(f"\033[38;5;39m[] \033[31mSRIKANDI-313  \033[34mSent to  \033[33m••>  \033[44m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
-                print(f"\033[97m[] \033[102mSRIKANDI-313\033[0m  \033[41mConnection-error\033[0m \033[41mServer Maybe down\033[0m")
+                print(f"\033[97m[] \033[102mSRIKANDI-313\033[0m  \033[7mConnection-error\033[0m \033[41mServer Maybe down\033[0m")
 
                 pass
             except requests.exceptions.InvalidSchema:
