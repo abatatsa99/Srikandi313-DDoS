@@ -105,10 +105,10 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print("\033[31m[]  \033[38;5;206mSRK-313  \033[38;5;39m"+u+"  \033[38;5;21mSent to ••>   \033[34m[" +str(url)+ "]\033[0m")
-                print("\033[33m[]  \033[32mSRK-313  \033[97m"+u+" \033[36mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
+                print("\033[31m[]  \033[38;5;206mSRK-313  \033[38;5;39m"+id+"  \033[38;5;21mSent to ••>   \033[34m[" +str(url)+ "]\033[0m")
+                print("\033[33m[]  \033[32mSRK-313  \033[97m"+id+" \033[36mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
-                print("\033[35m[]  \033[102mSRK-313 \033[97m%s \033[31mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
+                print("\033[35m[]  \033[102mSRK-313 \033[97"+id+" \033[31mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
 
                 pass
             except requests.exceptions.InvalidSchema:
