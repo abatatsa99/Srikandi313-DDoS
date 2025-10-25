@@ -21,7 +21,7 @@ else:
     os.system("clear")
 
 os.system("\033[44mhttps://github.com/abatatsa99\033[0m")
-print("\033[32m<<————————————————— MEDAN JUANG BLACK ARMY —————————————————>>\033[0m")
+print("\033[7m<<————————————————— MEDAN JUANG BLACK ARMY —————————————————>>\033[0m")
 time.sleep(5)
 print("Loading.......")
 
