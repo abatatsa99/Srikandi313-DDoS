@@ -55,8 +55,8 @@ while attemps < 100:
         print('Incorrect credentials. Check if you have Caps lock on and try again.')
         attemps += 1
         continue
-
-url = input("\033[96mURL:  \033[0m").strip()
+print("\033[32m┌[Black-Army•••")
+url = input("\033[32m└> URL:  \033[0m").strip()
 u = int(0)
 headers = []
 referer = [
