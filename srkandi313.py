@@ -49,10 +49,10 @@ print("""
 \033[36m'cyan
 """)
 while attemps < 100:
-    print("\033[104m┌[KunFayz•••\033[0m")
-    username = input("\033[104m└> Enter your username\033[0m"): \033[41m\033[0m")
-    print("\033[102m┌[KunFayz•••\033[0m")
-    password = input("\033[102m└> Enter your password\033[0m): \033[41m\033[0m")
+    print("\033[104m┌[KunFayz•••")
+    username = input("└> Enter your username): \033[41m\033[0m")
+    print("\033[102m┌[KunFayz•••")
+    password = input("\033[102m└> Enter your password: \033[41m\033[0m")
 
     if username == 'srk313' and password == 'srk313':
         print("\033[32m•••> SRIKANDI BLACK ARMY\033[0m")
