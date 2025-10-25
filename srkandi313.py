@@ -50,9 +50,9 @@ print("""
 """)
 while attemps < 100:
     print("\033[104m┌[KunFayz•••")
-    username = input("└> Enter your username: \033[41m\033[0m")
+    username = input("└> Enter your username: \033[41m")
     print("\033[102m┌[KunFayz•••")
-    password = input("└> Enter your password: \033[41m\033[0m")
+    password = input("└> Enter your password: \033[41m")
 
     if username == 'srk313' and password == 'srk313':
         print("\033[32m•••> SRIKANDI BLACK ARMY\033[0m")
