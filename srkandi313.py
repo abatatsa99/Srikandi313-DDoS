@@ -60,9 +60,7 @@ url = input("\033[32m└> URL:  \033[0m").strip()
 u = int(0)
 headers = []
 referer = [
-    "https://github.com",
     "https://google.it",
-    "https://alibaba.com",
     "https://google.com",
     "https://youtube.com",
     ]
@@ -76,7 +74,6 @@ def useragent():
     headers.append("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0")
     headers.append("Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/36.0  Mobile/15E148 Safari/605.1.15")
     return headers
-    headers.append("curl -i https://example.com")
 
 
 def genstr(size):
